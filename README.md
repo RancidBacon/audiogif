@@ -1,2 +1,2 @@
-# audiogif
-Audio GIFs (.a.gif) -- Sounds like a Bad Idea.
+## Audio GIFs (`.a.gif`)
+*"Sounds like a Bad Idea."*

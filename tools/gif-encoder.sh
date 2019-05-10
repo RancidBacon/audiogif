@@ -25,7 +25,7 @@
 #       & <http://blog.pkh.me/p/21-high-quality-gif-with-ffmpeg.html>
 #
 #
-# Version: v0.1
+# Version: v0.1.1
 #
 
 palette="/tmp/palette.png"
@@ -33,6 +33,7 @@ palette="/tmp/palette.png"
 # 10-15 fps seems to give a reasonable result.
 #filters="fps=15,scale=400:-1:flags=lanczos"
 filters="fps=12,scale=350:-1:flags=lanczos"
+#filters="fps=10,scale=300:-1:flags=lanczos"
 
 ffmpeg -v warning -i $1 -vf "$filters,palettegen=stats_mode=diff" -y $palette
 

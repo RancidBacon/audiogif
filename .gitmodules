@@ -1,0 +1,4 @@
+[submodule "thirdparty/gifuct-js"]
+	path = thirdparty/gifuct-js
+	url = ../gifuct-js.git
+	branch = add-audio-gif-support

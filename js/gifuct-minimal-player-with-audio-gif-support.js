@@ -157,6 +157,7 @@ function manipulate(){
 var playback_start_time = -1;
 
 function renderFrame(){
+
         // get the frame
         var frame = loadedFrames[frameIndex];
 

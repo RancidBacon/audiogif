@@ -1,4 +1,23 @@
 
+function setMessage(target_ctx, msg_fill_style, font_size_line_1, font_size_line_2, msg_line_1, msg_line_2) {
+
+  // TODO: Do this better... :)
+  target_ctx.textAlign = "center";
+  target_ctx.textBaseline = "middle";
+
+  target_ctx.fillStyle = msg_fill_style;
+
+  target_ctx.font = font_size_line_1 + "px sans-serif";
+
+  target_ctx.fillText(msg_line_1, target_ctx.canvas.width/2, ((target_ctx.canvas.height-font_size_line_1)/2)-(font_size_line_1*0.625));
+
+  target_ctx.font = font_size_line_2 + "px sans-serif";
+
+  target_ctx.fillText(msg_line_2, target_ctx.canvas.width/2, ((target_ctx.canvas.height-font_size_line_2)/2)+(font_size_line_2*0.625));
+
+}
+
+
 function setGIF(url) {
 
   // Everyone loves a "loading..." message...
@@ -9,12 +28,7 @@ function setGIF(url) {
   c.width = placeholder_width;
   c.height = placeholder_width;
 
-  ctx.font = font_size + "px sans-serif";
-  ctx.fillStyle = "#eb99a1";
-  ctx.textAlign = "center";
-
-  ctx.fillText("Audio GIF", placeholder_width/2, ((placeholder_width-font_size)/2)-(font_size*0.625));
-  ctx.fillText("loading", placeholder_width/2, ((placeholder_width-font_size)/2)+(font_size*0.625));
+  setMessage(ctx, "#eb99a1", font_size, font_size, "Audio GIF", "loading");
 
   // Actually start loading of the file...
   loadGIF(url);

@@ -36,7 +36,7 @@ function loadGIF(gifUrl){
                 var frames = gif.decompressFrames(true);
                 ////console.log(gif);
                 // render the gif
-                renderGIF(frames);
+                renderGIF(frames, gifUrl);
             }
         };
 
@@ -85,7 +85,36 @@ function setMessage(target_ctx, msg_fill_style, font_size_line_1, font_size_line
 }
 
 
-function renderGIF(frames){
+function renderWhenAudioReady(gifUrl) {
+
+        // Due to chang(ing|ed) WebAudio auto-play policies we need to detect when
+        // we're not auto-playing and prompt the person viewing the page to interact
+        // with the page.
+
+        // TODO: Handle this better?
+
+        audioCtx.resume();
+
+        if (audioCtx.state == "suspended") {
+
+                ctx.fillStyle = "#C7E3BE";
+                ctx.fillRect(0, 0, c.width, c.height);
+
+                setMessage(ctx, "#4a4a4a", 48, 24, "touch or click", "to hear the future of GIF");
+
+                setTimeout(function() {renderWhenAudioReady(gifUrl);}, 100);
+                return;
+        }
+
+        wrapWithLink(gifUrl);
+
+        if(!playing){
+                playpause();
+        }
+
+}
+
+function renderGIF(frames, gifUrl){
         loadedFrames = frames;
         frameIndex = 0;
 
@@ -95,9 +124,7 @@ function renderGIF(frames){
         gifCanvas.width = c.width;
         gifCanvas.height = c.height;
 
-        if(!playing){
-                playpause();
-        }
+        renderWhenAudioReady(gifUrl);
 }
 
 var frameImageData;

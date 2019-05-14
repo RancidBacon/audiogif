@@ -14,6 +14,4 @@ function setGIF(url) {
   // Actually start loading of the file...
   loadGIF(url);
 
-  wrapWithLink(url);
-
 }

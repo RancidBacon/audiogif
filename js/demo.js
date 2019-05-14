@@ -19,11 +19,6 @@ function setGIF(url) {
   // Actually start loading of the file...
   loadGIF(url);
 
-  // Make "Save Link As..." work
-  // TODO: Make "Save Image As..." work?
-  var img_link = document.createElement("a")
-  img_link.href = url;
-  img_link.className = "img_link";
-  c.parentElement.insertBefore(img_link, c);
-  img_link.appendChild(c);
+  wrapWithLink(url);
+
 }

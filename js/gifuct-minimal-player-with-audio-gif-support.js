@@ -54,6 +54,19 @@ function playpause(){
         }
 }
 
+function wrapWithLink(gifUrl) {
+
+  // Make "Save Link As..." work
+  // TODO: Make "Save Image As..." work?
+  // TODO: Don't recreate if already exists.
+  var img_link = document.createElement("a")
+  img_link.href = gifUrl;
+  img_link.className = "img_link";
+  c.parentElement.insertBefore(img_link, c);
+  img_link.appendChild(c);
+
+}
+
 function renderGIF(frames){
         loadedFrames = frames;
         frameIndex = 0;

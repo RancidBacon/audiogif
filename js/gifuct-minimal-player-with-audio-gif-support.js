@@ -135,6 +135,21 @@ function renderWhenAudioReady(gifUrl) {
 
 }
 
+
+function zoomOutMobile(targetWidth) {
+
+        // via <https://stackoverflow.com/questions/22639296/force-mobile-browser-zoom-out-with-javascript>
+
+        var viewport = document.querySelector('meta[name="viewport"]');
+
+        if (viewport) {
+                viewport.content = "initial-scale=0.1";
+                viewport.content = "width=" + (targetWidth/0.90);
+        }
+
+}
+
+
 function renderGIF(frames, gifUrl){
         loadedFrames = frames;
         frameIndex = 0;
@@ -147,6 +162,8 @@ function renderGIF(frames, gifUrl){
 
         gifCanvas.width = c.width;
         gifCanvas.height = c.height;
+
+	zoomOutMobile(c.width);
 
         renderWhenAudioReady(gifUrl);
 }

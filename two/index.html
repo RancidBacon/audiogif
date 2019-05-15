@@ -1,20 +1,17 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0">
     <title>Audio GIF Two</title>
     <link rel="stylesheet" href="/css/normalize.css" type="text/css">
     <link rel="stylesheet" href="/css/sakura-vader.css" type="text/css">
-    <style>
-      .img_link:hover {
-        border-bottom: none;
-      }
-    </style>
+    <link rel="stylesheet" href="/css/demo.css" type="text/css">
 </head>
-<body style="font-family: sans-serif;">
-    <div style="display: flex; flex-direction: column;">
-    <div style="margin-left: auto; margin-right: auto;">
+<body>
+    <div id="outer_container">
+    <div id="inner_container">
         <canvas  id="c"></canvas>
-        <div style="display: flex; justify-content: space-between;"><a href="/start">previous</a> <a href="/">?</a> <a href="/three">next</a></div>
+        <div id="inner_nav"><a href="/start">previous</a> <a href="/">?</a> <a href="/three">next</a></div>
     </div>
     </div>
     <script src="/js/gifuct-js.min.js"></script>

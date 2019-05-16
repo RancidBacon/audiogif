@@ -101,6 +101,6 @@ See `thirdparty/gifuct-js` in this repository. The Reference Implementation Play
 
 ## Changelog
 
-* 2019-05-14 Initial v0.1 release.
+* 2019-05-16 Initial v0.1 release.
 
 The Audio GIF is brought to you by <http://RancidBacon.com/>.

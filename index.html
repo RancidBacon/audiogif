@@ -1,12 +1,91 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Audio GIF | Sounds like a Bad Idea</title>
+    <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0">
+    <title>Audio GIF | Sounds Like a Bad Idea</title>
     <link rel="stylesheet" href="/css/normalize.css" type="text/css">
     <link rel="stylesheet" href="/css/sakura-earthly.css" type="text/css">
+    <Link rel="stylesheet" href="/css/demo.css" type="text/css">
+    <style>
+
+    sub code {
+        background-color: #cfac2a20;
+        padding: 0 0.25rem;
+    }
+
+    #tagline {
+        font-style: italic;
+        text-align: center;
+    }
+
+    #tldr {
+        border-color: #cfac2a80;
+        border-style: solid;
+        border-width: 2px;
+        text-align: center;
+        padding: 0.5rem;
+    }
+
+    #links {
+        display: flex;
+        justify-content: space-between;
+
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    #links a {
+         color: #4a4a4a;
+         font-size: 1.1em;
+    }
+
+    #credit {
+         text-align: center;
+         font-size: 0.75em;
+    }
+
+    span.line {
+         display: inline-block;
+    }
+
+    .link {
+         text-align: center;
+
+         background-color: #cfac2a80;
+         padding: 1rem;
+
+         font-weight:500;
+    }
+
+    </style>
 </head>
 <body style="font-family: sans-serif;">
-<h1>Audio GIF (<code>.a.gif</code>)</h1>
-<p style="font-style: italic;">&ldquo;Sounds like a Bad Idea&hellip;&rdquo;</p>
+    <h1 style="text-align: center;">The Audio GIF <sub><code>.a.gif</code></sub></h1>
+    <div id="outer_container">
+    <div id="inner_container">
+        <canvas  id="c"></canvas>
+        <p id="tagline">&ldquo;Sounds Like a Bad Idea.&rdquo;</p>
+    </div>
+    </div>
+    <div id="tldr">
+      <span class="line"><strong>TL;DR:</strong></span> <span class="line"><span class="line">An Audio GIF <em>stores audio inside</span> <span class="line">a standards compliant GIF image</em>.</span></span>
+    </div>
+
+    <div id="links">
+    <div class="link"><a href="/start"><span class="line">See &amp; Hear</span> <span class="line">Show Reel</span></a></div>
+    <div style="width:1em;"></div>
+    <div class="link"><a href="ReadMe.html#toc_2"><span class="line">Get Creation Tools</span> <span class="line">&amp; Read Specification</span></a></div>
+    </div>
+
+    <div id="credit">
+      The Audio GIF is brought to you by <a href="http://RancidBacon.com/">RancidBacon.com</a>.
+    </div>
+
+    <script src="/js/gifuct-js.min.js"></script>
+    <script src="/js/gifuct-minimal-player-with-audio-gif-support.js"></script>
+    <script src="/js/demo.js"></script>
+    <script>
+    setGIF("/images/this.is.a.gif");
+    </script>
 </body>
 </html>

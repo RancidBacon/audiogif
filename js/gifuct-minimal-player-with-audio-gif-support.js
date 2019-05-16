@@ -95,8 +95,8 @@ function setGIF(url) {
         c.width = placeholder_width;
         c.height = placeholder_width;
 
-	c.style.width = placeholder_width;
-	c.style.height = placeholder_width;
+        c.style.width = placeholder_width;
+        c.style.height = placeholder_width;
 
         setMessage(ctx, "#eb99a1", font_size, font_size, "Audio GIF", "loading");
 
@@ -175,13 +175,13 @@ function renderGIF(frames, gifUrl){
         c.width = frames[0].dims.width;
         c.height = frames[0].dims.height;
 
-	c.style.width = c.width;
-	c.style.height = c.height;
+        c.style.width = c.width;
+        c.style.height = c.height;
 
         gifCanvas.width = c.width;
         gifCanvas.height = c.height;
 
-	zoomOutMobile(c.width);
+        zoomOutMobile(c.width);
 
         renderWhenAudioReady(gifUrl);
 }

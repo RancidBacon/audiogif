@@ -153,6 +153,7 @@ function unlockAudioContext(event) {
 };
 
 
+// TODO: Make this optional.
 function zoomOutMobile(targetWidth) {
 
         // via <https://stackoverflow.com/questions/22639296/force-mobile-browser-zoom-out-with-javascript>

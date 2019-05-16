@@ -1,17 +1,23 @@
-# Audio GIFs (`.a.gif`)
-*"Sounds like a Bad Idea."*
+## Audio GIFs (`.a.gif`)
 
-**TL;DR:** **An Audio GIF stores audio *inside a standards compliant GIF image*.**
+*"Sounds Like a Bad Idea."*
 
-Unlike other approaches there is *no need for a separate audio or video file*.
+**TL;DR:** **An Audio GIF *stores audio inside a standards compliant Animated GIF image*.**
 
-Use `Save As...` on the GIF image file and the audio comes along for the ride!
+ * Unlike other approaches there is *no need for a separate audio or video file*.
+ * Use `Save As...` on the Animated GIF image file and the audio comes along for the ride.
+ * Share the Animated GIF file and you've shared the audio!
 
-## Samples
+### Samples
 
-View & hear the "show reel" here: <http://audiogif.rancidbacon.com/start>
+ * View & hear the "show reel" here: <http://audiogif.rancidbacon.com/start>
 
-## On this page
+### Project repository
+
+ * Get tools to create & play your own Audio GIFs: <https://github.com/RancidBacon/audiogif>
+
+
+### On this page
 
  * How to create an Audio GIF
  * Specification for "Audio for GIF" Application Extension
@@ -89,6 +95,10 @@ See `thirdparty/gifuct-js` in this repository. The Reference Implementation Play
 
 
 ## FAQ
+
+* **But why?**
+
+  Because sounds like a bad idea. :)
 
 [TODO]
 

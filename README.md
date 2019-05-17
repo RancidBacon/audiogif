@@ -12,10 +12,10 @@
 
  * View & hear the "show reel" here: <http://audiogif.rancidbacon.com/start>
 
-### Project repository
+### Project repository & home
 
  * Get tools to create & play your own Audio GIFs: <https://github.com/RancidBacon/audiogif>
-
+ * Project home: <http://audiogif.rancidbacon.com/>
 
 ### On this page
 

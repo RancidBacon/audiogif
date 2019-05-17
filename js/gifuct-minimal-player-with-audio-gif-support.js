@@ -118,11 +118,10 @@ function renderWhenAudioReady(gifUrl) {
 
         if (audioCtx.state == "suspended") {
 
-                // TODO: Limit to events on the placeholder so we don't break the links?
                 // TODO: Fix handling of right click.
-                document.body.addEventListener('click', unlockAudioContext, true);
-                document.body.addEventListener('touchstart', unlockAudioContext, true);
-                document.body.addEventListener('touchend', unlockAudioContext, true);
+                c.addEventListener('click', unlockAudioContext, true);
+                c.addEventListener('touchstart', unlockAudioContext, true);
+                c.addEventListener('touchend', unlockAudioContext, true);
 
                 ctx.fillStyle = "#C7E3BE";
                 ctx.fillRect(0, 0, c.width, c.height);
@@ -146,9 +145,9 @@ function unlockAudioContext(event) {
         // TODO: Handle this better?
         event.preventDefault();
         audioCtx.resume().then(function() {
-                document.body.removeEventListener('click', unlockAudioContext, true);
-                document.body.removeEventListener('touchend', unlockAudioContext, true);
-                document.body.removeEventListener('touchstart', unlockAudioContext, true);
+                c.removeEventListener('click', unlockAudioContext, true);
+                c.removeEventListener('touchend', unlockAudioContext, true);
+                c.removeEventListener('touchstart', unlockAudioContext, true);
         });
 };
 
